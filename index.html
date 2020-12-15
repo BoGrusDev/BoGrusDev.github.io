@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head>
+<head>  
     <meta charset="utf-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="manifest.json" />
@@ -15,37 +15,16 @@
     <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
     <meta name="theme-color" content="#db4938" />
     <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
-    <script type="text/javascript" src="js/bulma.js"></script>
 </head>
 <body>
     <section id="header" class="section"></section>
 
-    <div id="customer-list-container" class="container">
+    <div class="container">
         <div style="text-align: center">
             <h1 class="is-size-2">Välkommen till Demo-pwa</h1>
         </div>
     </div>
-    
-
-    <script>
-        
-        fetch("inc/header.html")
-            .then(response => {
-            return response.text()
-         })
-        .then(data => {
-            document.getElementById("header").innerHTML = data;
-        })
-        .then(data => {
-            var burger = document.querySelector('.navbar-burger');
-            var menu = document.querySelector('#' + burger.dataset.target);
-            burger.addEventListener('click', function() {
-                burger.classList.toggle('is-active');
-                menu.classList.toggle('is-active');
-            });
-        })
-    </script>
-    
-    
+    <script src="js/bulma.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

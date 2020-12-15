@@ -1,9 +1,10 @@
-const cacheName = "demo-pwa-v2";
+const cacheName = "demo-pwa-v4";
 const filesToCache = [
         '/index.html',
         '/gallery.html',
         '/inc/header.html',
         '/css/bulma.min.css',
+        '/js/bulma.js',
         '/manifest.json',
         '/images/bild1.jpg',
         '/images/bild2.jpg',
