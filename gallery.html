@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
+    <style>
+        .image {
+            width: 100%;
+            padding: 40px
+        }
+    </style>
+</head>
+<body>
+    <section id="header" class="section"></section>
+    <section>
+        <div id="customer-list-container" class="container" style="padding:0 20px">
+            <div>
+                <h1 class="is-size-2">Gallery</h1>
+            </div>
+
+            <div class="columns">
+                <div class="column">
+                    <img class = "image" src="images/bild1.jpg">
+                </div>
+                <div class="column">
+                    <img class = "image" src="images/bild2.jpg">
+                </div>
+                <div class="column">
+                    <img class = "image" src="images/bild3.jpg">
+                </div>
+                <div class="column">
+                    <img class = "image" src="images/bild4.jpg">
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <img class = "image" src="images/bild5.jpg">
+                </div>
+                <div class="column">
+                    <img class = "image" src="images/bild6.jpg">
+                </div>
+                <div class="column">
+                    <img class = "image" src="images/bild7.jpg">
+                </div>
+                <div class="column">
+                    <img class = "image" src="images/bild8.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        
+        fetch("inc/header.html")
+            .then(response => {
+            return response.text()
+         })
+        .then(data => {
+            document.getElementById("header").innerHTML = data;
+        });
+        
+    </script>
+    
+    <script>
+     /* src="js/main.js"> */
+     </script>
+</body>
+</html>
