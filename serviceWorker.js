@@ -1,4 +1,4 @@
-const cacheName = "demo-pwa-v5001";
+const cacheName = "demo-pwa-v5006";
 const filesToCache = [
         '/index.html',
         '/gallery.html',
@@ -16,7 +16,7 @@ const filesToCache = [
         '/images/bild8.jpg',
 ];
 
-console.log('Set');
+console.log('Set v3');
 
 self.addEventListener ('install', function(e) {
     console.log('install');
@@ -36,3 +36,21 @@ self.addEventListener('fetch', function(e) {
         })
     );
 });
+
+/*
+self.addEventListener('activate', function(event) {
+    event.waitUntil(
+      caches.keys().then(function(cacheNames) {
+        return Promise.all(
+          cacheNames.filter(function(cacheName) {
+            // Return true if you want to remove this cache,
+            // but remember that caches are shared across
+            // the whole origin
+          }).map(function(cacheName) {
+            return caches.delete(cacheName);
+          })
+        );
+      })
+    );
+  });
+  */
