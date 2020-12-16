@@ -1,4 +1,4 @@
-const cacheName = "demo-pwa-v4";
+const cacheName = "demo-pwa-v5";
 const filesToCache = [
         '/index.html',
         '/gallery.html',
