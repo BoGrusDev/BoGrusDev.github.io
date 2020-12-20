@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
             burger.classList.toggle('is-active');
             menu.classList.toggle('is-active');
         });
+
+       
+
     })
 });
 
