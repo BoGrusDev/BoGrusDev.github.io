@@ -58,24 +58,24 @@ window.onload  = () => {
 
 
             //registration.update()
-            /*
+            
             Notification.requestPermission(function(result) {
                 if (result === 'granted') {
                     navigator.serviceWorker.ready.then(function(registration) {
-                        // alert('notification');
-
+                        alert('notification');
                         var options = {
-                            body: "Test av notification",
-                  
+                            body: 'It’s me.',
+                            icon: 'images/favicon.png',
+                
                             requireInteraction: true
                             //data : payload
                         };
 
-                    registration.showNotification('Notification with ServiceWorker', options);
+                    registration.showNotification('My mtification', options);
                     });
                 }
             });
-            */
+            
 
        });
     };
