@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM');
+ 
     fetch("inc/header.html")
         .then(response => {
         return response.text()

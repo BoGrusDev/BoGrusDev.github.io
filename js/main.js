@@ -8,15 +8,35 @@ window.onload  = () => {
 };
 */
 
+function forceSWupdate () {
+        alert('Force update');
+        location.reload();
+        /*
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (registrations) {
+            for (let registration of registrations) {
+                registration.update();
+                alert('Registration done');
+            }
+            console.log('Reload');
+            // location.reload();
+            location.href = location.href;
+            console.log('not Reload');
+        })  
+    };
+    */
+};
 
 
 window.onload  = () => {
+
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('./serviceWorker.js')
         .then(function(registration) {
         // registration worked
-         console.log('Registration succeeded.');
-            
+        console.log('Registration succeeded.');
+        
+        
          registration.pushManager.getSubscription()
          .then(function (subscription) {
            //If already access granted, enable push button status

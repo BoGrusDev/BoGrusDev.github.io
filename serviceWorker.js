@@ -1,5 +1,5 @@
-const cacheName = "demo-pwa-v6";
-const VERSION = "v6";
+const cacheName = "demo-pwa-v18";
+const VERSION = "v18";
 const filesToCache = [
         '/index.html',
         '/manifest.json',
@@ -21,12 +21,19 @@ const filesToCache = [
 
 self.addEventListener ('install', function(e) {
     console.log('install');
+    //self.skipWaiting();
     e.waitUntil(
         caches.open(cacheName)
         .then(function(cache) {
             //console.log(cache);
             return cache.addAll(filesToCache);
         })
+        
+        .then(function() {
+          console.log('skip');
+          self.skipWaiting();
+        })
+        
     );
 });
 
@@ -60,6 +67,21 @@ self.addEventListener('activate', function (event) {
 }); 
 
 
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        if (response) { //entry found in cache
+          return response
+        }
+        return fetch(event.request)
+      }
+    )
+  )
+})
+
+/*
 self.addEventListener('fetch', function (event) {
   // console.log('default');
   event.respondWith(
@@ -68,7 +90,7 @@ self.addEventListener('fetch', function (event) {
       })
   )
 })
-
+*/
 /*
 self.addEventListener('fetch', function(e) {
   // console.log('fetch network');
