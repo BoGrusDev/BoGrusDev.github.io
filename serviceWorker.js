@@ -1,5 +1,5 @@
-const cacheName = "demo-pwa-v33";
-const VERSION = "v33";
+const cacheName = "demo-pwa-v35";
+const VERSION = "v35";
 const filesToCache = [
         '/index.html',
         '/manifest.json',
@@ -65,16 +65,6 @@ self.addEventListener('fetch', (event) => {
 })
 
 /*
-self.addEventListener('fetch', function (event) {
-  // console.log('default');
-  event.respondWith(
-      fetch(event.request).catch(function() {
-          return caches.match(event.request)
-      })
-  )
-})
-*/
-/*
 self.addEventListener('fetch', function(e) {
   // console.log('fetch network');
   e.respondWith(fetch(e.request)
@@ -83,22 +73,12 @@ self.addEventListener('fetch', function(e) {
       })
   );
 });
-
-
-
-
-/*
-
-*/
-
-
-
 /*
 self.addEventListener('push', event => {
   var payload = event.data.text();
   var options = {
           body: payload,
-          icon: '~/images/favicon.ico',
+          icon: './images/favicon.ico',
 
           requireInteraction: true
           //data : payload
@@ -116,7 +96,7 @@ self.addEventListener('push', function(event) {
   event.waitUntil(
     // Show a notification with title 'ServiceWorker Cookbook' and use the payload
     // as the body.
-    self.registration.showNotification('Mitt Pus-upp medeland', {
+    self.registration.showNotification('Mitt Push-upp medeland', {
       body: payload,
     })
   );

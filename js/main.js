@@ -55,27 +55,24 @@ window.onload  = () => {
          .catch(function (error) {
            console.error('Error occurred while enabling push ', error);
          });
-
-
-            //registration.update()
+        /*
+        Notification.requestPermission(function(result) {
+            if (result === 'granted') {
+                navigator.serviceWorker.ready.then(function(registration) {
+                    alert('notification');
+                    var options = {
+                        body: 'It’s me.',
+                        icon: 'images/favicon.png',
             
-            Notification.requestPermission(function(result) {
-                if (result === 'granted') {
-                    navigator.serviceWorker.ready.then(function(registration) {
-                        alert('notification');
-                        var options = {
-                            body: 'It’s me.',
-                            icon: 'images/favicon.png',
-                
-                            requireInteraction: true
-                            //data : payload
-                        };
+                        requireInteraction: true
+                        //data : payload
+                    };
 
-                    registration.showNotification('My mtification', options);
-                    });
-                }
-            });
-            
+                registration.showNotification('My notification', options);
+                });
+            }
+        });
+        */
 
        });
     };
