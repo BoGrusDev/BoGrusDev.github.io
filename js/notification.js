@@ -1,5 +1,5 @@
 Notification.requestPermission(function(status) {
-   alert('Notification permission status:', status);
+   alert('Notification permission status: ' + status);
 });
 
 /*
