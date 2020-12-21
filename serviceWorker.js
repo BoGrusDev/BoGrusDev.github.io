@@ -1,5 +1,5 @@
-const cacheName = "demo-pwa-v36";
-const VERSION = "v36";
+const cacheName = "demo-pwa-v37";
+const VERSION = "v37";
 const filesToCache = [
         '/index.html',
         '/manifest.json',
