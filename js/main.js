@@ -10,7 +10,8 @@ window.onload  = () => {
 
 function forceSWupdate () {
         alert('Force update');
-        location.reload();
+        // location.reload();
+        location.href = location.href;
         /*
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.getRegistrations().then(function (registrations) {
